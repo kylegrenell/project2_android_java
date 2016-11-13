@@ -12,7 +12,7 @@ public class CategoryTest {
             this.category = category;
         }
 
-        public void tellItLikeItIs() {
+        public void structureTests() {
             switch (category) {
                 case HEIGHT:
                     System.out.println("That's pretty high");
@@ -35,4 +35,18 @@ public class CategoryTest {
                     break;
             }
         }
+
+    public static void main(String[] args) {
+        CategoryTest height = new CategoryTest(Category.HEIGHT);
+        height.structureTests();
+        CategoryTest age = new CategoryTest(Category.AGE);
+        age.structureTests();
+        CategoryTest heritage = new CategoryTest(Category.HERITAGE_VALUE);
+        heritage.structureTests();
+        CategoryTest maintenance = new CategoryTest(Category.MAINTENANCE);
+        maintenance.structureTests();
+        CategoryTest haunted = new CategoryTest(Category.HAUNTED_RANK);
+        haunted.structureTests();
+    }
+}
 }
